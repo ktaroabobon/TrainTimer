@@ -12,4 +12,4 @@ services:
     environment:
       - NODE_ENV=development
     restart: unless-stopped
-    
+    tty: true

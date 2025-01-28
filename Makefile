@@ -69,14 +69,6 @@ rebuild:
 open:
 	open http://localhost:9000
 
-.PHONY: bun-add
-bun-add:
-	docker compose exec app bun add $(filter-out $@,$(MAKECMDGOALS))
-
-.PHONY: bun-install
-bun-install:
-	docker compose exec app bun install
-
 .PHONY: test
 test:
 	docker compose exec app bun test
