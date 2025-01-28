@@ -80,3 +80,12 @@ bun-install:
 .PHONY: test
 test:
 	docker compose exec app bun test
+
+.PHONY: bun-add
+bun-add: PACHAGE=
+bun-add:
+	docker compose exec app bun add $(PACHAGE)
+
+.PHONY: bun-install
+bun-install:
+	docker compose exec app bun install
